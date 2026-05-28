@@ -1,13 +1,13 @@
-﻿#include <string>
+#include <string>
 #include <algorithm>
 using namespace std;
 
-class SimilarityChecker {
+class LengthSimilarityChecker {
 public:
-    static const int MAX_SCORE = 60;
+    static constexpr int MAX_SCORE = 60;
 
     int calculate(const string& s1, const string& s2) const {
-        const size_t longerLen = max(s1.length(), s2.length());
+        const size_t longerLen  = max(s1.length(), s2.length());
         const size_t shorterLen = min(s1.length(), s2.length());
 
         if (longerLen == shorterLen) {
